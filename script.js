@@ -12,7 +12,7 @@ function randomAlphabetInArray(row,col){
     return hasil    
 }
 var contoh = randomAlphabetInArray(15,15)
-function checkVowell(contoh){
+function checkVowels(contoh){
     //let vowell = 'aiueo'
     //console.log(contoh)
     let hasil = 0;
@@ -36,4 +36,4 @@ function checkVowell(contoh){
     return hasil
 }
 //var contoh =[['A','X','C','Y'],['E','O','O','S'],['I','U','I','N'],['M','Y','O','E'],['P','D','A','I']];
-console.log(checkVowell(contoh))
+console.log(checkVowels(contoh))
