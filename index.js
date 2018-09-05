@@ -1,5 +1,5 @@
 function board(jumlahRow, jumlahCol) {
-  let alphabet = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+  let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let result = [];
   let inside = '';
 
@@ -10,7 +10,20 @@ function board(jumlahRow, jumlahCol) {
       result[i].push(inside);
     }
   }
-  return result;
+  console.log(result);
+
+  let vowels = 'AIUEO';
+  let count = 0;
+  for (var i = 0; i < result.length - 1; i++) {
+    for (var j = 0; j < result[i].length - 1; j++) {
+      if (vowels.includes(result[i][j]) === true && vowels.includes(result[i][j+1]) === true && vowels.includes(result[i+1][j]) === true && vowels.includes(result[i+1][j+1]) === true) {
+        //console.log('ada');
+        count++;
+      }
+    }
+  }
+  //debugger;
+  return count;
 }
 
 console.log(board(5, 4));
